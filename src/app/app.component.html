@@ -1,0 +1,6 @@
+<div [class.disable]="(showSpinner | async)"></div>
+<router-outlet>
+  <div [hidden]="!(showSpinner | async)">
+    <mat-spinner class="spinner"></mat-spinner>
+  </div>
+</router-outlet>

@@ -1,0 +1,43 @@
+<div class="container">
+  <form class="form form-login">
+    <div class="loginform__logo-container">
+      <img class="loginform__logo" src="../../assets/svg/plutus.svg" alt="Plutus Logo">
+    </div>
+    <div class="heading heading-primary login-heading">Login</div>
+    <div class="sub-heading">Sign in to your account</div>
+
+
+
+    <div class="loginform__field-container">
+      <mat-form-field appearance="fill" class="login-form__input">
+        <mat-label>Username</mat-label>
+        <span matPrefix class="icon-user loginform__input-icon"></span>
+        <input type="text" matInput [(ngModel)]="authenticationInfo.username" name="username">
+      </mat-form-field>
+    </div>
+
+
+    <div class="loginform__field-container">
+      <mat-form-field appearance="fill" class="login-form__input">
+        <mat-label>Password</mat-label>
+        <span matPrefix class="icon-password loginform__input-icon"></span>
+        <input type="password" matInput [(ngModel)]="authenticationInfo.password" name="password">
+      </mat-form-field>
+    </div>
+
+
+    <div class="loginform__field-container">
+      <button class="btn btn-primary loginform__button" id="loginButton" (click)="onLoginClick()">
+        Login
+      </button>
+    </div>
+    <div class="small-text">
+      <a href="#">Forgot Password?</a>
+    </div>
+    <div class="loginform__field-container">
+      <button class="btn btn-secondary loginform__button" id="registerButton">
+        Register New Account
+      </button>
+    </div>
+  </form>
+</div>

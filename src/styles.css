@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Rounded");
+
+:root {
+  --primary-color: #2f80ed;
+  --high-spend-color: #E76F51;
+  --medium-spend-color: #E9C46A;
+  --low-spend-color: #5FAD56;
+}
+
+* {
+  font-family: Roboto;
+}
+
+.form {
+  background: #ffffff;
+  box-shadow: 3px 3px 10px var(--primary-color);
+}
+
+html {
+  font-size: 62%;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.material-icons:hover {
+  cursor: pointer;
+}

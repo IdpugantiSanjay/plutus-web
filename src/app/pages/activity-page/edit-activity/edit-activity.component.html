@@ -1,0 +1,14 @@
+<form [formGroup]="editActivityFormGroup">
+  <plutus-activity-form formName="Edit Activity" [formControl]="activityFormControl">
+    <plutus-activity-form formControlName="activityFormData" [formName]="'Edit Activity'">
+      <ng-template #updateButtonTemplate let-option>
+        <div matTooltip="Activity Not Changed" [matTooltipDisabled]="!transactionUnchanged">
+          <button mat-raised-button class="secondary-button" [disabled]="disableUpdateButton"
+            (click)="onUpdateButtonClick()">
+            Update
+          </button>
+        </div>
+      </ng-template>
+    </plutus-activity-form>
+  </plutus-activity-form>
+</form>

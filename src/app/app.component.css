@@ -1,0 +1,28 @@
+.container {
+    left: 20%;
+    top: 20%;
+    height: 100%
+}
+
+
+.spinner {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  z-index: 1076;
+  /* transform: translate(50%, -50%); */
+}
+
+.disable {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1073;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+}

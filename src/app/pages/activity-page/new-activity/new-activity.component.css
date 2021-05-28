@@ -1,0 +1,5 @@
+.secondary-button {
+  margin-top: 10px;
+  background-color: #eff5fe;
+  color: var(--primary-color);
+}

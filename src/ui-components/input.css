@@ -1,0 +1,42 @@
+.input-large {
+  width: 80%;
+  height: 5rem;
+  font-size: medium;
+  background: #f2f2f2;
+  border-width: 0rem;
+  border-bottom: 0.2rem solid grey;
+  opacity: 50%;
+}
+
+
+
+.input-large:hover {
+  border-bottom: 0.2rem solid var(--primary-color);
+  opacity: 100%;
+}
+
+.input-large:focus {
+  border-bottom: 0.2rem solid var(--primary-color);
+  opacity: 100%;
+  outline: none;
+}
+
+.input-icon-container {
+  position: relative;
+}
+
+.input-icon-container:hover > * {
+  opacity: 100%;
+}
+
+.input-icon-container:focus > svg {
+  opacity: 100%;
+}
+
+.input-icon-container input[type="text"] {
+  padding-left: 4rem;
+}
+
+.input-icon-container input[type="password"] {
+  padding-left: 4rem;
+}

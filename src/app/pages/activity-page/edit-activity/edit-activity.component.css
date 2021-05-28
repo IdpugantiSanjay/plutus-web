@@ -1,0 +1,11 @@
+.secondary-button {
+  margin-top: 10px;
+  background-color: #eff5fe;
+  color: var(--primary-color);
+}
+
+
+
+.secondary-button[disabled="true"] {
+  cursor: not-allowed;
+}

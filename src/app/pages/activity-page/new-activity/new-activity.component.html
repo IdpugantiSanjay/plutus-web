@@ -1,0 +1,11 @@
+<form [formGroup]="activityFormGroup">
+  <plutus-activity-form formControlName="activityFormData" [formName]="'Create New Activity'"
+    (onSubmitButtonClick)="onCreateButtonClick($event)">
+    <ng-template #createButtonTemplate let-option>
+      <button plutusBusyButton mat-raised-button class="secondary-button"
+        (click)="option.onClick.emit(option.form.value)" [disabled]="option.form.invalid">
+        Create
+      </button>
+    </ng-template>
+  </plutus-activity-form>
+</form>

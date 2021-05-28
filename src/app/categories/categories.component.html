@@ -1,0 +1,32 @@
+<ng-container *ngIf="showAllCategories">
+  <mat-form-field class="category__formfield">
+    <mat-label>Categories</mat-label>
+    <mat-select [formControl]="categoryControl" (valueChange)="onValueChange($event)">
+      <mat-select-trigger> 
+        {{ categoryControl.value?.name }}
+      </mat-select-trigger>
+      <mat-option> -- </mat-option>
+      <ng-container *ngIf="(categoryGroups | async).length">
+        <mat-optgroup  *ngFor="let group of categoryGroups | async" [label]="group.name">
+          <mat-option *ngFor="let category of group.categories | async" [value]="category">
+            <mat-icon> {{ category.icon }} </mat-icon> {{ category.name }}
+          </mat-option>
+        </mat-optgroup>
+      </ng-container>
+    </mat-select>
+  </mat-form-field>
+</ng-container>
+
+<ng-container *ngIf="!showAllCategories">
+  <mat-form-field class="category__formfield">
+    <mat-label>Category</mat-label>
+    <mat-select [formControl]="categoryControl" (valueChange)="onValueChange($event)" [compareWith]="compareFunction">
+      <mat-select-trigger> 
+        {{ categoryControl.value?.name }}
+      </mat-select-trigger>
+      <mat-option *ngFor="let category of categories | async" [value]="category">
+        <mat-icon> {{ category.icon }} </mat-icon> {{ category.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</ng-container>

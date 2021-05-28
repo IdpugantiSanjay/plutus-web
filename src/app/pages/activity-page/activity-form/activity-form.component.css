@@ -1,0 +1,39 @@
+.row-field {
+  width: 100%;
+}
+
+.credit-checkbox {
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+}
+
+.category {
+  flex-basis: 95%;
+  flex-shrink: 2;
+}
+
+.credit-checkbox {
+  flex-basis: 5%;
+  margin-top: 12px;
+  margin-right: 12px;
+}
+
+.description-textarea {
+  resize: none;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+

@@ -1,0 +1,41 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>
+      <div class="sidenav-item-logo" title="Plutus Logo">
+        <span style="cursor: pointer" class="header icon-logo"></span>
+      </div>
+    </mat-toolbar>
+    <mat-nav-list>
+      <ng-container *ngFor="let leftNavItem of leftNavItems">
+        <div class="sidenav-item" routerLinkActive="sidenav-item-active" [routerLink]="leftNavItem.routerLink">
+          <div [class]="leftNavItem.iconClass"></div>
+          <div class="nav-text"> {{ leftNavItem.name }} </div>
+        </div>
+      </ng-container>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <div class="navbar-container">
+        <div class="title">Plutus</div>
+        
+        <mat-icon [matTooltip]="username">account_circle</mat-icon>
+        <!-- <span>
+          {{ username }}
+        </span> -->
+        <i class="material-icons logout" (click)="logout()" matTooltip='Logout'> exit_to_app </i>
+      </div>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

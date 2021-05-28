@@ -1,0 +1,31 @@
+.btn {
+  cursor: pointer;
+  border-radius: 0px;
+  border-width: 0px;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn-large {
+  width: 40rem;
+  height: 5rem;
+  font-size: medium;
+  font-weight: 450;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: #f8f8f8;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-large:hover {
+  box-shadow: 0px 0px 4px var(--primary-color);
+}

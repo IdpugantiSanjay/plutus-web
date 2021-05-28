@@ -1,0 +1,17 @@
+.heading {
+  font-weight: bold;
+  font-size: 3.6rem;
+  line-height: 4.2rem;
+  text-align: center;
+}
+
+.sub-heading {
+  font-weight: normal;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 2.4rem;
+}
+
+.heading-primary {
+  color: var(--primary-color);
+}

@@ -1,0 +1,50 @@
+.icon {
+  position: absolute;
+  opacity: 50%;
+}
+
+.icon-user {
+  content: url("../assets/svg/user.svg");
+}
+
+.icon-password {
+  content: url("../assets/svg/password.svg");
+}
+
+.icon:hover {
+  opacity: 100%;
+}
+
+.icon:focus {
+  opacity: 100%;
+}
+
+
+.icon-home {
+  content: url('../assets/svg/home.svg');
+}
+
+.icon-activity {
+  content: url('../assets/svg/activity.svg');
+}
+
+.icon-goal {
+  content: url('../assets/svg/goal.svg');
+}
+
+.icon-users {
+  content: url('../assets/svg/users.svg');
+}
+
+
+.icon-logo {
+  content: url("../assets/svg/plutus.svg");
+}
+
+.icon-category {
+  content: url("../assets/svg/category.svg");
+}
+
+.start-logo {
+  content: url("../assets/svg/start.svg");
+}
