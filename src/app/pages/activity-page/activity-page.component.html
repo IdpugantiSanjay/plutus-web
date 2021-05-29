@@ -1,12 +1,12 @@
 <div class="right">
-  <ng-container *ngIf="(activatedComponent) == 'ActivityHistoryComponent'">
+  <ng-container *ngIf="(activatedComponent) === 'ActivityHistoryComponent'">
     <button mat-raised-button routerLink="/home/activity/add">
       <span class="material-icons"> add_circle </span>
       Add Activity
     </button>
   </ng-container>
 
-  <ng-container *ngIf="(activatedComponent) == 'NewActivityComponent'">
+  <ng-container *ngIf="(activatedComponent) === 'NewActivityComponent'">
     <button mat-raised-button routerLink="/home/activity/history">
       <span class="material-icons"> history </span>
       Activity History
