@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:14-alpine3.13
 
 WORKDIR /src/plutus-web
 
