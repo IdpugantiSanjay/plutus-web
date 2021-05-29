@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core'
+import { ActivityHistoryComponent } from './activity-history/activity-history.component'
+import { NewActivityComponent } from './new-activity/new-activity.component'
 
 type ActivatedComponent = 'ActivityHistoryComponent' | 'NewActivityComponent'
 
@@ -8,7 +10,11 @@ type ActivatedComponent = 'ActivityHistoryComponent' | 'NewActivityComponent'
   styleUrls: ['./activity-page.component.css'],
 } )
 export class ActivityPageComponent implements OnInit {
-  activatedComponent: ActivatedComponent;
+  #activatedComponent: ActivatedComponent;
+
+  get activatedComponent(): ActivatedComponent {
+    return this.#activatedComponent
+  }
 
   constructor() {
     
@@ -18,8 +24,12 @@ export class ActivityPageComponent implements OnInit {
     
   }
 
+
   onRouterOutletActivate( event: any ): void {
-    if ( !event || !event.__proto__ ) return
-    this.activatedComponent = event?.__proto__?.constructor.name
+    if ( event instanceof ActivityHistoryComponent ) {
+      this.#activatedComponent = 'ActivityHistoryComponent'
+    } else if ( event instanceof NewActivityComponent ) {
+      this.#activatedComponent = 'NewActivityComponent'
+    }
   }
 }
