@@ -16,9 +16,10 @@ export class DashboardPageComponent implements OnInit {
       values: _2021.concat( _2020 ),
     },
     mark: 'circle',
-    width: 500,
+    width: 300,
+    height: 320,
     encoding: {
-      x: { field: 'date', type: 'temporal', timeUnit: 'yearmonthdate' },
+      x: { field: 'date', type: 'temporal', timeUnit: 'yearmonth' },
       y: { field: 'amount', type: 'quantitative' },
       size: { field: 'amount', type: 'quantitative' },
       tooltip: { field: 'amount' },

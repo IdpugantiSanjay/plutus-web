@@ -19,6 +19,7 @@ export class ActivityPageComponent implements OnInit {
   }
 
   onRouterOutletActivate( event: any ): void {
-    this.activatedComponent = event.__proto__.constructor.name
+    if ( !event || !event.__proto__ ) return
+    this.activatedComponent = event?.__proto__?.constructor.name
   }
 }
